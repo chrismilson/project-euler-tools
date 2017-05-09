@@ -14,6 +14,7 @@ def setup(number, name):
 def setupFolder(path):
     if not os.path.exists(path):
         os.makedirs(path)
+        print("New folder generated at " + path)
     else:
         return 1
     return 0
