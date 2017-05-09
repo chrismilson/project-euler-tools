@@ -14,9 +14,9 @@ This will set up everything.
 
 Once the tools are installed you could use
 ```
-./new -n 6 -N square-sums
+./new -n 6 -N square-sums -l python
 ```
-To set up a new folder with everything you would need to do problem 6 and name things square-sums.
+To set up a new folder with everything you would need to do problem 6 and name things square-sums and using python.
 
 ## project-euler
 
