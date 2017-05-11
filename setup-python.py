@@ -1,4 +1,5 @@
 import os
+from time import strftime, localtime
 
 def setup(number, name):
     path = "./problems/problem-" + str(number)
@@ -48,4 +49,3 @@ def setupProgramfiles(path, number, name):
     programFile.write("Problem " + str(number) + "\n\n\n\n")
     programFile.write("Answer : \n")
     programFile.write("\"\"\"\n")
-    
