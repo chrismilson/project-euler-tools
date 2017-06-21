@@ -16,8 +16,6 @@ except getopt.GetoptError:
     sys.exit(2)
 
 nflag = Nflag = lflag = False
-number = 0
-name = language = ""
 
 for opt, arg in opts:
     if opt == '-h':
@@ -36,6 +34,29 @@ for opt, arg in opts:
 # print("language = " + language)
 # print("name = " + name)
 # print("number = " + str(number))
+
+if nflag == False:
+    number = input("What number is the problem you want to do?")
+    if number == "q" or number == "quit":
+        sys.exit()
+    try:
+        number = int(number)
+    except:
+        print("please enter a number or \'quit\'")
+    while type(number) != int:
+        number = input("What number is the problem you want to do?")
+        if number == "q" or number == "quit":
+            sys.exit()
+        try:
+            number = int(number)
+        except:
+            print("please enter a number or \'quit\'")
+
+if Nflag == False:
+    name = input("What name did you want to give problem %d?" % number)
+
+if lflag == False:
+    language = input("What language did you want to use?")
 
 setup = getattr(load_module(language), "setup", False)
 
